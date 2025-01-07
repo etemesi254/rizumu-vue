@@ -1,6 +1,8 @@
 <template>
   <div class="audio-processor">
-    <h1>Audio Processor</h1>
+    <h1>Rizumu</h1>
+    <p>Rizumu is a speech extractor/isolator of audio files.
+      Given an audio file, it isolates speech from the file.</p>
 
     <!-- Settings Panel -->
     <div class="settings-panel">

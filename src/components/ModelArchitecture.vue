@@ -8,7 +8,6 @@
         <p>Simple video that goes over what the model does under the hood</p>
         <video
             class="architecture-video"
-            autoplay
             src="../assets/video/separation_video.mp4"
             controls
             style="width: 100%;"
