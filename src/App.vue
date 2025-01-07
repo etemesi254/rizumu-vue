@@ -25,6 +25,13 @@
           Model Architecture
         </button>
         <button
+            :class="['nav-button', { active: currentPage === 'advancements' }]"
+            @click="currentPage = 'advancements'"
+        >
+          <img src="/src/assets/new-5-svgrepo-com.svg" style="width: 20px;height: 20px"/>
+          Advancements
+        </button>
+        <button
             :class="['nav-button', { active: currentPage === 'dataset-description' }]"
             @click="currentPage = 'dataset-description'"
         >
@@ -55,6 +62,7 @@
       <ModelArchitecture v-if="currentPage === 'architecture'"/>
       <DatasetDescription v-if="currentPage === 'dataset-description'"/>
       <Problems v-if="currentPage === 'problems'"/>
+      <Advancements v-if="currentPage === 'advancements'"/>
     </div>
   </div>
 </template>
@@ -64,10 +72,12 @@ import AudioProcessor from './components/AudioProcessor.vue'
 import ModelArchitecture from './components/ModelArchitecture.vue'
 import DatasetDescription from "@/components/DatasetDescription.vue";
 import Problems from "@/components/Problems.vue";
+import Advancements from "@/components/Advancements.vue";
 
 export default {
   name: 'App',
   components: {
+    Advancements,
     Problems,
     DatasetDescription,
     AudioProcessor,
