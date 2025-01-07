@@ -42,7 +42,7 @@ export default {
         {
           category: "Sample 1 Test Data",
           description: "A Sample derived from test Data",
-          mix: 'public/samples/mix.mp3',
+          mix: 'public/samples/speech.mp3',
           speech: 'public/samples/speech.mp3',
           output: 'public/samples/cleaned.mp3'
         },
@@ -52,12 +52,25 @@ export default {
           mix: 'public/samples/sauti-sol/mix.mp3',
           output: 'public/samples/sauti-sol/output.mp3',
         },
-        // {
-        //   category: "Rick Astley Never Gonna Give You Up",
-        //   description: "Rick Astley Never Give You Up 1 minute",
-        //   mix: 'public/samples/rick-astley/mix.mp3',
-        //   output: 'public/samples/rick-astley/output.mp3',
-        // }
+        {
+          category: "Rick Astley Never Gonna Give You Up",
+          description: "Rick Astley Never Give You Up 1 minute, shows the model weakness to music files",
+          mix: 'public/samples/rick-astley/mix.mp3',
+          output: 'public/samples/rick-astley/output.mp3',
+        },
+        {
+          category: "DnR folder 312",
+          description: "Sample from Divide and Remaster Dataset 312, lifted mix and speech files",
+          mix: "public/samples/sample-2/mix.mp3",
+          speech: 'public/samples/sample-2/speech.mp3',
+          output: 'public/samples/sample-2/model-output.mp3',
+        },
+        {
+          category: "Kidum-Mapenzi",
+          description: "Kidum Mapenzi mix, again, show model weakness to music files since they were not present in training dataset",
+          mix: 'public/samples/rick-astley/mix.mp3',
+          output: 'public/samples/rick-astley/output.mp3',
+        },
       ]
     }
   },

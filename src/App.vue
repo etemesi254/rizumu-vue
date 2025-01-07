@@ -24,11 +24,37 @@
           </svg>
           Model Architecture
         </button>
+        <button
+            :class="['nav-button', { active: currentPage === 'dataset-description' }]"
+            @click="currentPage = 'dataset-description'"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="currentColor"
+                  d="M11 19.913c-4.966-.084-8-1.388-8-2.334v-6.248C4.643 12.429 8.082 13 11.5 13s6.857-.57 8.5-1.67V14h1V5c0-1.97-4.78-3-9.5-3S2 3.03 2 5v12.58c0 2.116 4.448 3.255 9 3.333zM11.5 3C17 3 20 4.321 20 5s-3 2-8.5 2S3 5.679 3 5s3-2 8.5-2zM3 6.411C4.643 7.457 8.082 8 11.5 8s6.857-.543 8.5-1.589v3.437C20 10.726 16.689 12 11.5 12S3 10.726 3 9.848zM18 15l-1-1h-3l-1 1h-1v8h11v-8zm4 7h-9v-4h9zm-9-5v-1h.414l1-1h2.172l1 1H22v1z"/>
+            <path fill="none" d="M0 0h24v24H0z"/>
+          </svg>
+          Dataset Description
+        </button>
+        <button
+            :class="['nav-button', { active: currentPage === 'problems' }]"
+            @click="currentPage = 'problems'"
+        >
+          <svg fill="currentColor" stroke="currentColor" width="20" height="20" viewBox="0 0 1920 1920"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M961 1C431.645 1 1 431.645 1 961s430.645 960 960 960 960-430.645 960-960S1490.355 1 961 1m0 1807.059c-467.125 0-847.059-379.934-847.059-847.059 0-467.125 379.934-847.059 847.059-847.059 467.125 0 847.059 379.934 847.059 847.059 0 467.125-379.934 847.059-847.059 847.059m319.465-1246.374-319.51 319.51-319.398-319.51-79.85 79.85 319.398 319.51-319.397 319.398 79.85 79.85 319.397-319.398 319.51 319.397 79.85-79.85-319.51-319.397 319.51-319.51-79.85-79.85Z"
+                fill-rule="evenodd"/>
+          </svg>
+          Problems
+        </button>
       </div>
+
     </nav>
     <div class="container">
-      <AudioProcessor v-if="currentPage === 'home'" />
-      <ModelArchitecture v-if="currentPage === 'architecture'" />
+      <AudioProcessor v-if="currentPage === 'home'"/>
+      <ModelArchitecture v-if="currentPage === 'architecture'"/>
+      <DatasetDescription v-if="currentPage === 'dataset-description'"/>
+      <Problems v-if="currentPage === 'problems'"/>
     </div>
   </div>
 </template>
@@ -36,10 +62,14 @@
 <script>
 import AudioProcessor from './components/AudioProcessor.vue'
 import ModelArchitecture from './components/ModelArchitecture.vue'
+import DatasetDescription from "@/components/DatasetDescription.vue";
+import Problems from "@/components/Problems.vue";
 
 export default {
   name: 'App',
   components: {
+    Problems,
+    DatasetDescription,
     AudioProcessor,
     ModelArchitecture
   },

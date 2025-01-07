@@ -1,601 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 body {
-  font-family: -apple-system, system-ui, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #f5f5f5;
+    font-family: "Nunito Sans", -apple-system, system-ui, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f5f5f5;
 }
 
 .container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .upload-section, .samples-section {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .samples-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .sample-item {
-  padding: 10px;
-  background: #f8f8f8;
-  border-radius: 4px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 4px;
 }
 
 .file-input-wrapper {
-  margin: 20px 0;
-  padding: 20px;
-  border: 2px dashed #ccc;
-  border-radius: 8px;
-  text-align: center;
-  transition: all 0.3s ease;
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .file-input-wrapper:hover {
-  border-color: #007bff;
-  background: #f8f9fa;
+    border-color: #007bff;
+    background: #f8f9fa;
 }
 
 .file-input-wrapper input[type="file"] {
-  display: none;
+    display: none;
 }
 
 .file-input-label {
-  cursor: pointer;
-  color: #007bff;
-  font-weight: 500;
+    cursor: pointer;
+    color: #007bff;
+    font-weight: 500;
 }
 
 button {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-  background: #0056b3;
+    background: #0056b3;
 }
 
 button:disabled {
-  background: #ccc;
+    background: #ccc;
 }
 
 .progress-wrapper {
-  display: none;
-  margin: 20px 0;
+    display: none;
+    margin: 20px 0;
 }
 
 .progress-bar {
-  height: 4px;
-  background: #e9ecef;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
 }
 
 .progress-bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 30%;
-  background: #007bff;
-  animation: progress 1s ease infinite;
-  border-radius: 4px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: #007bff;
+    animation: progress 1s ease infinite;
+    border-radius: 4px;
 }
 
 .status-text {
-  margin-top: 10px;
-  text-align: center;
-  color: #666;
+    margin-top: 10px;
+    text-align: center;
+    color: #666;
 }
 
 @keyframes progress {
-  0% {
-    left: -30%;
-  }
-  100% {
-    left: 100%;
-  }
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 
 audio {
-  width: 100%;
-  margin: 10px 0;
+    width: 100%;
+    margin: 10px 0;
 }
 
 .processing-steps {
-  margin-top: 10px;
-  font-size: 14px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .processing-step {
-  margin: 5px 0;
-  color: #666;
-  display: flex;
-  align-items: center;
+    margin: 5px 0;
+    color: #666;
+    display: flex;
+    align-items: center;
 }
 
 .processing-step.active {
-  color: #007bff;
+    color: #007bff;
 }
 
 .step-indicator {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  margin-right: 8px;
-  position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 8px;
+    position: relative;
 }
 
 .processing-step.active .step-indicator {
-  border-color: #007bff;
+    border-color: #007bff;
 }
 
 .processing-step.done .step-indicator::after {
-  content: '✓';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #28a745;
-  font-size: 12px;
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #28a745;
+    font-size: 12px;
 }
 
 .settings-panel {
-  margin: 20px 0;
-  padding: 15px;
-  background: #f8f9fa;
-  border-radius: 8px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
 }
 
 .settings-panel select {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  margin-left: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-left: 10px;
 }
 
 
 .nav {
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 0 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px 20px;
+
 }
 
 .nav-content {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  gap: 20px;
-  height: 60px;
-  align-items: center;
+    max-width: 800px;
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+    align-items: center;
 }
-
+@media screen  and (max-width: 600px) {
+    .nav-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
 .nav-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border: none;
-  background: none;
-  border-radius: 6px;
-  cursor: pointer;
-  color: #666;
-  font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #666;
+    font-size: 15px;
 }
 
 .nav-button:hover {
-  color: #333;
-  background: #f5f5f5;
+    color: #333;
+    background: #f5f5f5;
 }
 
 .nav-button.active {
-  background: #ebf5ff;
-  color: #2563eb;
+    background: #ebf5ff;
+    color: #2563eb;
 }
 
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .page {
-  display: none;
+    display: none;
 }
 
 .page.active {
-  display: block;
+    display: block;
 }
 
 .model-section {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card {
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 16px;
 }
 
 .feature-card h3 {
-  margin-top: 0;
-  color: #1e40af;
+    margin-top: 0;
+    color: #1e40af;
 }
 
 .encoder-section {
-  background: #eff6ff;
+    background: #eff6ff;
 }
 
 .attention-section {
-  background: #f5f3ff;
+    background: #f5f3ff;
 }
 
 .lstm-section {
-  background: #f0fdf4;
+    background: #f0fdf4;
 }
 
 .decoder-section {
-  background: #fef3c7;
+    background: #fef3c7;
 }
 
 .final-section {
-  background: #fee2e2;
+    background: #fee2e2;
 }
 
 /* Existing styles */
 .upload-section, .samples-section {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .file-input-wrapper {
-  margin: 20px 0;
-  padding: 20px;
-  border: 2px dashed #ccc;
-  border-radius: 8px;
-  text-align: center;
-  transition: all 0.3s ease;
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 .file-input-wrapper:hover {
-  border-color: #2563eb;
-  background: #f8f9fa;
+    border-color: #2563eb;
+    background: #f8f9fa;
 }
 
 .file-input-wrapper input[type="file"] {
-  display: none;
+    display: none;
 }
 
 .file-input-label {
-  cursor: pointer;
-  color: #2563eb;
-  font-weight: 500;
+    cursor: pointer;
+    color: #2563eb;
+    font-weight: 500;
 }
 
 button {
-  background: #2563eb;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-  background: #1d4ed8;
+    background: #1d4ed8;
 }
 
 button:disabled {
-  background: #ccc;
+    background: #ccc;
 }
 
 .settings-panel {
-  margin: 20px 0;
-  padding: 15px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .settings-panel select {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  margin-left: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-left: 10px;
 }
 
 .tech-details {
-  background: #f8fafc;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 20px;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .tech-details ul {
-  margin: 0;
-  padding-left: 20px;
+    margin: 0;
+    padding-left: 20px;
 }
 
 .tech-details li {
-  margin: 8px 0;
-  color: #475569;
+    margin: 8px 0;
+    color: #475569;
 }
 
 .architecture-container {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
 }
 
 .network-layer {
-  background: #f8fafc;
-  padding: 15px;
-  border-radius: 6px;
-  margin-bottom: 15px;
-  border-left: 4px solid #3b82f6;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3b82f6;
 }
 
 .network-layer h3 {
-  margin: 0 0 10px 0;
-  color: #1e40af;
+    margin: 0 0 10px 0;
+    color: #1e40af;
 }
 
 .layer-details {
-  font-family: monospace;
-  background: #1e293b;
-  color: #e2e8f0;
-  padding: 15px;
-  border-radius: 4px;
-  margin: 10px 0;
-  white-space: pre-line;
-  overflow-x: auto;
+    font-family: monospace;
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 10px 0;
+    white-space: pre-line;
+    overflow-x: auto;
 }
 
 .architecture-diagram {
-  margin: 20px 0;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.architecture-video{
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.architecture-video {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }
+
 .code-block {
-  background: #1e293b;
-  color: #e2e8f0;
-  padding: 15px;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-family: monospace;
-  line-height: 1.5;
+    background: #1e293b;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: monospace;
+    line-height: 1.5;
 }
 
 .architecture-section {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .parameter-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 15px 0;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
 }
 
 .parameter-table th,
 .parameter-table td {
-  padding: 12px;
-  border: 1px solid #e2e8f0;
-  text-align: left;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
 }
 
 .parameter-table th {
-  background: #f8fafc;
-  font-weight: 600;
+    background: #f8fafc;
+    font-weight: 600;
 }
 
 .samples-header {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
 .samples-dropdown {
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  min-width: 200px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 200px;
 }
 
 .sample-category {
-  display: none;
-  margin-bottom: 30px;
+    display: none;
+    margin-bottom: 30px;
 }
 
 .sample-category.active {
-  display: block;
+    display: block;
 }
 
 .sample-item {
-  padding: 10px;
-  background: #f8f8f8;
-  border-radius: 4px;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 4px;
 }
 
 .sample-item h3 {
-  margin: 0 0 15px 0;
-  font-size: 16px;
-  color: #2563eb;
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #2563eb;
 }
 
 .audio-label {
-  display: block;
-  font-size: 14px;
-  color: #64748b;
-  margin-bottom: 5px;
+    display: block;
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 5px;
 }
 
 .audio-group {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 audio {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
 }
 
 .sample-description {
-  font-size: 14px;
-  color: #475569;
-  margin-bottom: 15px;
-  line-height: 1.5;
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 .settings-panel {
-  margin: 20px 0;
-  padding: 15px;
-  background: #f5f5f5;
-  border-radius: 8px;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
 }
 
 .settings-panel select {
-  padding: 8px;
-  margin-left: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .processing-mode {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .file-input-wrapper {
-  margin: 20px 0;
-  text-align: center;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .file-input-label {
-  display: block;
-  padding: 20px;
-  border: 2px dashed #ccc;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 10px 0;
-  background: #f9f9f9;
+    display: block;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 0;
+    background: #f9f9f9;
 }
 
 .file-input-label:hover {
-  background: #f0f0f0;
-  border-color: #999;
+    background: #f0f0f0;
+    border-color: #999;
 }
 
 #processBtn {
-  display: block;
-  width: 200px;
-  margin: 20px auto;
-  padding: 12px 24px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 #processBtn:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+    background: #ccc;
+    cursor: not-allowed;
 }
 
 .progress-wrapper {
-  display: none;
-  margin: 20px 0;
+    display: none;
+    margin: 20px 0;
 }
 
 .progress-bar {
-  height: 4px;
-  background: #e0e0e0;
-  border-radius: 2px;
-  overflow: hidden;
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
 .progress-bar div {
-  height: 100%;
-  width: 0;
-  background: #007bff;
-  transition: width 0.3s ease;
+    height: 100%;
+    width: 0;
+    background: #007bff;
+    transition: width 0.3s ease;
 }
 
 .processing-steps {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 .processing-step {
-  display: flex;
-  align-items: center;
-  margin: 8px 0;
-  color: #666;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    color: #666;
 }
 
 .step-indicator {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 10px;
 }
 
 .processing-step.active .step-indicator {
-  border-color: #007bff;
-  background: #007bff;
+    border-color: #007bff;
+    background: #007bff;
 }
 
 .processing-step.done .step-indicator {
-  border-color: #28a745;
-  background: #28a745;
+    border-color: #28a745;
+    background: #28a745;
 }
 
 #result {
-  margin: 20px 0;
-  text-align: center;
+    margin: 20px 0;
+    text-align: center;
 }
 
 #result audio {
-  width: 100%;
-  max-width: 500px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .error-message {
-  padding: 12px;
-  background: #fee;
-  border: 1px solid #fcc;
-  border-radius: 4px;
-  color: #c00;
-  margin: 10px 0;
+    padding: 12px;
+    background: #fee;
+    border: 1px solid #fcc;
+    border-radius: 4px;
+    color: #c00;
+    margin: 10px 0;
 }
