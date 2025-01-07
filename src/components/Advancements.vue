@@ -72,7 +72,7 @@
 
         <img src="/public/img_2.png" style="width: 100%"/>
 
-        <p class="center"> Green->Normal Bi-LSTM, Grey->With Self-Attention </p>
+        <p class="center"> Red->Normal Bi-LSTM, Grey->With Self-Attention </p>
       </li>
     </ol>
   </div>
