@@ -42,7 +42,7 @@ export default {
         {
           category: "Sample 1 Test Data",
           description: "A Sample derived from test Data",
-          mix: 'public/samples/speech.mp3',
+          mix: 'public/samples/mix.mp3',
           speech: 'public/samples/speech.mp3',
           output: 'public/samples/cleaned.mp3'
         },
